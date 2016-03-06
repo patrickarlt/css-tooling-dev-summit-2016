@@ -42,7 +42,7 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section data-background="img/title.png" data-background-size="cover">
-					<br><br><br><br>
+					<br><br><br>
 					<h1>Easier CSS Coding</h1>
 					<h3><a href="https://patrickarlt.com">Patrick Arlt</a></h3>
 					<p>
@@ -50,13 +50,18 @@
 					</p>
 				</section>
 
-				<section data-background="img/bg-2.png" data-background-size="cover">
+				<section data-background="img/bg-1.png" data-background-size="cover">
 					<h2>Lets looks at some CSS</h2>
-					<p><a href="https://gist.github.com/patrickarlt/0bd9d14e2e1a2809dc46">Some really complex CSS</a> that <a href="">does some cool stuff</a></p>
+					<p><a href="https://gist.github.com/patrickarlt/0bd9d14e2e1a2809dc46">Some really complex CSS</a> that <a href="">does some cool stuff</a>.</p>
 				</section>
 
-				<section data-background="img/bg-2.png" data-background-size="cover">
-					<h2>The 7 Deadly CSS Sins</h2>
+				<section data-background="img/bg-1.png" data-background-size="cover">
+					<h2>I write a lot of CSS</h2>
+					<p>Over 25k lines of CSS across <a href="https://developers.arcgis.com/">https://developers.arcgis.com</a></p>
+				</section>
+
+				<section data-background="img/bg-1.png" data-background-size="cover">
+					<h2>Problems with CSS at Scale</h2>
 					<ol>
 						<li>Gobal namespace</li>
 						<li>Dependencies</li>
@@ -66,33 +71,47 @@
 						<li>Non-deterministic resolution</li>
 						<li>Isolation</li>
 					</ol>
-					<p class="fragment"><a href="https://speakerdeck.com/vjeux/react-css-in-js">From this talk</a></p>
+					<p>From <a href="http://blog.vjeux.com/2014/javascript/react-css-in-js-nationjs.html">React: CSS in JS – NationJS</a></p>
 				</section>
 
-				<section data-background="img/bg-2.png" data-background-size="cover">
-					<h2>And In Non-Programmer Speak</h2>
+				<section data-background="img/bg-1.png" data-background-size="cover">
+					<h2>Problems with CSS at Scale</h2>
 					<ol>
 						<li>Everything is a global</li>
 						<li>No package mangers or modules</li>
-						<li>Can't figure out when you aren't using code</li>
-						<li>Can't be minifed</li>
+						<li>Can't can't remove unused code</li>
+						<li>Can't be minifed efficiently</li>
 						<li>Can't share common values</li>
 						<li>Can't figure out which rule applies to what</li>
 						<li>Can't isolate styles from each other</li>
 					</ol>
 				</section>
 
-				<section data-background="img/bg-2.png" data-background-size="cover">
+				<section data-background="img/bg-1.png" data-background-size="cover">
+					<h2>More CSS Problems&hellip;</h2>
+					<ul>
+						<li>Repetion</li>
+						<li>Browsers</li>
+						<li>Standards</li>
+					</ul>
+				</section>
+
+				<section data-background="img/bg-1.png" data-background-size="cover">
 					<h2>Lets looks at that CSS again</h2>
 					<a href="https://gist.github.com/patrickarlt/0bd9d14e2e1a2809dc46">Box Group CSS</a></a>
 				</section>
 
-				<section data-background="img/bg-2.png" data-background-size="cover">
-					<h2>Lets solve CSS!</h2>
-					<p class="fragment">Said everyone ever&hellip;</p>
+				<section data-background="img/bg-1.png" data-background-size="cover">
+					<h2>Ways to solve problems with CSS.</h2>
+					<ul>
+						<li>Naming conventions</li>
+						<li>Use JavaScript to write CSS</li>
+						<li>Give CSS a modules system</li>
+						<li>Pre/Post Processors</li>
+					</ul>
 				</section>
 
-				<section data-background="img/bg-3.png" data-background-size="cover">
+				<section data-background="img/bg-1.png" data-background-size="cover">
 					<h2>Obligatory Quote:</h2>
 					<blockquote>
 						There are only two hard problems in Computer Science: cache invalidation and naming things.
@@ -101,7 +120,7 @@
 					</blockquote>
 				</section>
 
-				<section data-background="img/bg-3.png" data-background-size="cover">
+				<section data-background="img/bg-1.png" data-background-size="cover">
 					<h2>Ways to name things in CSS&hellip;</h2>
 					<ul>
 						<li><a href="http://getbem.com/naming/">BEM</a></li>
@@ -112,47 +131,56 @@
 					</ul>
 				</section>
 
-				<section data-background="img/bg-2.png" data-background-size="cover">
+				<section data-background="img/bg-1.png" data-background-size="cover">
+					<p>Don't get too caught up in this.</p>
+					<p><a href="https://medium.com/@drublic/css-naming-conventions-less-rules-more-fun-12af220e949b#.2jrn0mo7g">CSS Naming Conventions: Fewer Rules, more Fun</a></p>
+				</section>
+
+				<section data-background="img/bg-1.png" data-background-size="cover">
 					<h2>Do we even need CSS anymore?</h2>
 					<p class="fragment">- Everyone using React</p>
 				</section>
 
-				<section data-background="img/bg-2.png" data-background-size="cover">
+				<section data-background="img/bg-1.png" data-background-size="cover">
 					<h2>Write inline styles with JavaScript</h2>
 					<div data-markdown>
 					  ``` js
 var divStyle = {
 	color: 'white',
-	backgroundImage: 'url(' + imgUrl + ')',
-	WebkitTransition: 'all', // note the capital 'W' here
-	msTransition: 'all' // 'ms' is the only lowercase vendor prefix
+	fontSize: '2rem'
 };
 
-ReactDOM.render(&lt;div style={divStyle}&gt;Hello World!&lt;/div&gt;, mountNode);
+ReactDOM.render(
+	&lt;div style={divStyle}&gt;Hello World!&lt;/div&gt;,
+	document.body
+);
+						```
+					</div>
+
+					<div data-markdown>
+						``` html
+&lt;div style="color: white; font-size: 2rem;"&gt;Hello World!&lt;/div&gt;
 						```
 					</div>
 				</section>
 
-				<section data-background="img/bg-2.png" data-background-size="cover">
+				<section data-background="img/bg-1.png" data-background-size="cover">
 					<h2>Mixed Feelings</h2>
-					<p>This approach solves all 7 problems. But also causes lots of other, more subtle problems.</p>
-					<ul>
-						<li><a href="http://blog.vjeux.com/2014/javascript/react-css-in-js-nationjs.html">CSS in JS</a></li>
-						<li><a href="https://css-tricks.com/the-debate-around-do-we-even-need-css-anymore/">The Debate Around “Do We Even Need CSS Anymore?”</a></li>
-					</ul>
+					<p>Solves lots of problems. Causes lots of problems.</p>
+					<p><a href="https://css-tricks.com/the-debate-around-do-we-even-need-css-anymore/">The Debate Around “Do We Even Need CSS Anymore?”</a></p>
 				</section>
 
-				<section data-background="img/bg-2.png" data-background-size="cover">
+				<section data-background="img/bg-1.png" data-background-size="cover">
 					<h2>CSS Modules!</h2>
-					<p>Sort of like React's inline styles but with slightly less/different drawbacks.</p>
+					<p>Like inline styles but as an extension of the CSS standard.</p>
 					<p><a href="http://glenmaddern.com/articles/css-modules">CSS Modules: Welcome to the Future</a></p>
 				</section>
 
-				<section data-background="img/bg-2.png" data-background-size="cover">
+				<section data-background="img/bg-1.png" data-background-size="cover">
 					<h2>A Button with CSS Modules</h2>
 					<div data-markdown>
 					  ``` css
-/* components/submit-button.css */
+/* button.css */
 .normal { /* all styles for Normal */ }
 .disabled { /* all styles for Disabled */ }
 .error { /* all styles for Error */ }
@@ -162,51 +190,54 @@ ReactDOM.render(&lt;div style={divStyle}&gt;Hello World!&lt;/div&gt;, mountNode)
 
 					<div data-markdown>
 					  ``` js
-/* components/submit-button.js */
-import styles from './submit-button.css';
+/* button.js */
+import styles from './button.css';
 
-buttonElem.outerHTML = `&lt;button class=${styles.normal}&gt;Submit&lt;/button&gt;`
+var button = document.getElementById('myButton');
+
+button.classList.add(styles.normal);
 						```
 					</div>
 
 					<div data-markdown>
 					  ``` html
-&lt;button class="components_submit_button__normal__abc5436"&lt;
+<!-- In your HTML-->
+&lt;button id="myButton" class="button__normal__abc5436"&gt;
   Processing...
 &lt;/button&gt;
 						```
 					</div>
 				</section>
 
-				<section data-background="img/bg-2.png" data-background-size="cover">
-					<h2>CSS Modules!</h2>
+				<section data-background="img/bg-1.png" data-background-size="cover">
+					<h2>CSS Modules Are Awesome!</h2>
+					<p>They solve a lot of our problems. But&hellip;</p>
 					<ul>
-						<li>Most exciting thing in this talk</li>
-						<li>Super alpha</li>
+						<li>JavaScript framework specific</li>
 						<li>Not a formal spec</li>
-						<li>Requires extra tools</li>
+						<li>Requires extra processing tools</li>
+						<li>Still a little to early to use</li>
 					</ul>
 				</section>
 
-				<section data-background="img/bg-2.png" data-background-size="cover">
+				<section data-background="img/bg-1.png" data-background-size="cover">
 					<h2>Pre/Post Processing</h2>
-					<p>Add extra stuff to the CSS language. Includes Sass, Less, Stylus and PostCSS.</p>
+					<p>Extend the CSS language. Sass, Less, Stylus and PostCSS.</p>
 					<ul>
 						<li>Variables to share values</li>
 						<li>Reusable functions</li>
 						<li>Seperate files and imports</li>
 						<li>Logic and operators</li>
-						<li>Module systems</li>
-						<li>Plugins</li>
 					</ul>
 				</section>
 
-				<section data-background="img/bg-2.png" data-background-size="cover">
+
+				<section data-background="img/bg-1.png" data-background-size="cover">
 					<h2>Practical CSS Tools</h2>
-					<p>Pick the problems you want to solve for, then use tools that solve those problems.</p>
+					<p>Pick the problems you want to solve, then use tools that solve those problems.</p>
 				</section>
 
-				<section data-background="img/bg-2.png" data-background-size="cover">
+				<section data-background="img/bg-1.png" data-background-size="cover">
 					<h2>What I Want From My CSS Tools</h2>
 					<ul>
 						<li>Add structure and logic</li>
@@ -218,7 +249,7 @@ buttonElem.outerHTML = `&lt;button class=${styles.normal}&gt;Submit&lt;/button&g
 					</ul>
 				</section>
 
-				<section data-background="img/bg-2.png" data-background-size="cover">
+				<section data-background="img/bg-1.png" data-background-size="cover">
 					<h2>A Practical CSS Toolkit</h2>
 					<ul>
 						<li>Pick some naming conventions</li>
@@ -228,15 +259,15 @@ buttonElem.outerHTML = `&lt;button class=${styles.normal}&gt;Submit&lt;/button&g
 					</ul>
 				</section>
 
-				<section data-background="img/bg-2.png" data-background-size="cover">
+				<section data-background="img/bg-1.png" data-background-size="cover">
 					<h2>Naming convention</h2>
-					<p>We use a loose'ish version of <a href="http://getbem.com/naming/">BEM</a>. This works just fine and we dont have to bend over backward to stick to our own conventions.</p>
+					<p>We use a loose'ish version of <a href="http://getbem.com/naming/">BEM</a>. Works just fine and we dont have to bend over backward to stick to our own conventions.</p>
 					<p><a href="https://medium.com/@drublic/css-naming-conventions-less-rules-more-fun-12af220e949b#.2jrn0mo7g">CSS Naming Conventions: Fewer Rules, more Fun</a></p>
 				</section>
 
-				<section data-background="img/bg-2.png" data-background-size="cover">
+				<section data-background="img/bg-1.png" data-background-size="cover">
 					<h2>SASS</h2>
-					<p>SASS adds lots of features over CSS.</p>
+					<p>SASS adds lots of features to CSS for managing larger codebases.</p>
 					<ul>
 						<li>Variables</li>
 						<li>Nesting (Namespacing)</li>
@@ -248,9 +279,9 @@ buttonElem.outerHTML = `&lt;button class=${styles.normal}&gt;Submit&lt;/button&g
 					<p><a href="http://sass-lang.com/guide">Get started with SASS</a></p>
 				</section>
 
-				<section data-background="img/bg-2.png" data-background-size="cover">
+				<section data-background="img/bg-1.png" data-background-size="cover">
 					<h2>PostCSS</h2>
-					<p>Apply transformations to existing CSS.</p>
+					<p>Apply transformations to CSS with JavaScript plugins.</p>
 					<ul>
 						<li><a href="https://github.com/postcss/autoprefixer">Autoprefixer</a></li>
 						<li><a href="http://cssnext.io/">CSS Next</a></li>
@@ -258,9 +289,10 @@ buttonElem.outerHTML = `&lt;button class=${styles.normal}&gt;Submit&lt;/button&g
 					</ul>
 				</section>
 
-				<section data-background="img/bg-2.png" data-background-size="cover">
+				<section data-background="img/bg-1.png" data-background-size="cover">
 					<h2>Autoprefixer</h2>
 					<p>Automagically add vendor prefixes to exisitng CSS code.</p>
+					<p>No more <code>-webkit-</code>, <code>-moz-</code>, <code>-ms-</code> ect&hellip;</p>
 				</section>
 
 				<section data-background="img/bg-1.png" data-background-size="cover">

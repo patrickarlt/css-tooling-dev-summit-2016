@@ -13,18 +13,18 @@
 	display: flex;
   flex-direction: column;
 
-  .box-content,
-  .box-header,
-  .box-footer {
+  &-content,
+  &-header,
+  &-footer {
       display: block;
   }
 
-  .box-content {
+  &-content {
     flex: 1 1 auto;
   }
 
-  .box-header,
-  .box-footer {
+  &-header,
+  &-footer {
     flex: 0 0 auto;
   }
 }
