@@ -1,0 +1,33 @@
+@import 'config';
+
+html, body {
+  color: $light-theme-text;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.demo-section {
+  padding: 1rem;
+  margin: 1rem;
+
+  .demo-header {
+    text-align: center;
+  }
+}
+
+.demo-section + .demo-section {
+  border-top: 2px solid $dark-theme-border;
+}
+
+button {
+  box-sizing: border-box;
+  width: 100%;
+  border: 2px solid #27ae60;
+  background: #2ecc71;
+  color: #ecf0f1;
+  font-size: .825rem;
+  padding: .5rem 1rem;
+}
+
+.box-header h1 {
+  margin: 0;
+}
