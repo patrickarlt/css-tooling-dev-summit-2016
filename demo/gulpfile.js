@@ -1,3 +1,4 @@
+// gulpfile.js
 var gulp = require('gulp');
 var sourcemaps = require('gulp-sourcemaps');
 var sass = require('gulp-sass');
@@ -26,6 +27,6 @@ gulp.task('css', function () {
     }))
 
     .pipe(sourcemaps.write('./'))
-    
+
     .pipe(gulp.dest('./'))
 });
