@@ -92,6 +92,9 @@
 }
 
 .box-group-1-up {
+  width: 100%;
+  margin: 0;
+
   .box {
     @include box(1, 0px);
   }
