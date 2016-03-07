@@ -82,7 +82,7 @@
 						<li>Can't can't remove unused code</li>
 						<li>Can't be minifed efficiently</li>
 						<li>Can't share common values</li>
-						<li>Can't figure out which rule applies to what elements</li>
+						<li>Specificity cold war</li>
 						<li>Can't isolate styles from each other</li>
 					</ol>
 				</section>
@@ -102,7 +102,7 @@
 				</section>
 
 				<section data-background="img/bg-1.png" data-background-size="cover">
-					<h2>Ways to solve problems with CSS.</h2>
+					<h2>Fixing CSS With Tooling</h2>
 					<ul>
 						<li>Naming conventions</li>
 						<li>Use JavaScript to write CSS</li>
@@ -124,7 +124,7 @@
 					<h2>Ways to name things in CSS&hellip;</h2>
 					<ul>
 						<li><a href="http://getbem.com/naming/">BEM</a></li>
-						<li><a href="https://oocss.org/">OOCSS</a></li>
+						<li><a href="https://github.com/stubbornella/oocss/wiki/">OOCSS</a></li>
 						<li><a href="https://smacss.com/">SMACSS</a></li>
 						<li><a href="http://suitcss.github.io/">SUITCSS</a></li>
 						<li><a href="https://github.com/nemophrost/atomic-css">Atomic</a></li>
@@ -137,8 +137,15 @@
 				</section>
 
 				<section data-background="img/bg-1.png" data-background-size="cover">
-					<h2>Do we even need CSS anymore?</h2>
+					<h2>Write CSS In JavaScript</h2>
 					<p class="fragment">- Everyone using React</p>
+				</section>
+
+				<section data-background="img/bg-1.png" data-background-size="cover">
+					<blockquote>
+						<p>The worst things about CSS are the "Cascading" and the "Sheets"</p>
+						<cite>Jed Schmidt - At Brooklyn JS</cite>
+					</blockquote>
 				</section>
 
 				<section data-background="img/bg-1.png" data-background-size="cover">
@@ -151,7 +158,7 @@ var divStyle = {
 };
 
 ReactDOM.render(
-	&lt;div style={divStyle}&gt;Hello World!&lt;/div&gt;,
+	&lt;div style={divStyle}&gt;Hi!&lt;/div&gt;,
 	document.body
 );
 						```
@@ -165,6 +172,10 @@ ReactDOM.render(
 				</section>
 
 				<section data-background="img/bg-1.png" data-background-size="cover">
+					We already tried this in 1996 when Netscape introduced <a href="https://en.wikipedia.org/wiki/JavaScript_Style_Sheets">JavaScript StyleSheets (JSSS)</a>.
+				</section>
+
+				<section data-background="img/bg-1.png" data-background-size="cover">
 					<h2>Mixed Feelings</h2>
 					<p>Solves lots of problems. Causes lots of problems.</p>
 					<p><a href="https://css-tricks.com/the-debate-around-do-we-even-need-css-anymore/">The Debate Around “Do We Even Need CSS Anymore?”</a></p>
@@ -172,7 +183,7 @@ ReactDOM.render(
 
 				<section data-background="img/bg-1.png" data-background-size="cover">
 					<h2>CSS Modules!</h2>
-					<p>Like inline styles but as an extension of the CSS standard.</p>
+					<p>What if you could import CSS code like you can JavaScript modules?</p>
 					<p><a href="http://glenmaddern.com/articles/css-modules">CSS Modules: Welcome to the Future</a></p>
 				</section>
 
@@ -201,7 +212,7 @@ button.classList.add(styles.normal);
 
 					<div data-markdown>
 					  ``` html
-<!-- In your HTML-->
+&lt;!-- In your HTML --&gt;
 &lt;button id="myButton" class="button__normal__abc5436"&gt;
   Processing...
 &lt;/button&gt;
@@ -213,10 +224,9 @@ button.classList.add(styles.normal);
 					<h2>CSS Modules Are Awesome!</h2>
 					<p>They solve a lot of our problems. But&hellip;</p>
 					<ul>
-						<li>JavaScript framework specific</li>
 						<li>Not a formal spec</li>
-						<li>Requires extra processing tools</li>
-						<li>Still a little to early to use</li>
+						<li>Extra processing tools</li>
+						<li>Very early in development</li>
 					</ul>
 				</section>
 
@@ -228,6 +238,7 @@ button.classList.add(styles.normal);
 						<li>Reusable functions</li>
 						<li>Seperate files and imports</li>
 						<li>Logic and operators</li>
+						<li>Inheriance</li>
 					</ul>
 				</section>
 
@@ -238,7 +249,7 @@ button.classList.add(styles.normal);
 				</section>
 
 				<section data-background="img/bg-1.png" data-background-size="cover">
-					<h2>What I Want From My CSS Tools</h2>
+					<h2>What I Want&hellip;</h2>
 					<ul>
 						<li>Add structure and logic</li>
 						<li>Reuse and share code</li>
@@ -291,7 +302,7 @@ button.classList.add(styles.normal);
 
 				<section data-background="img/bg-1.png" data-background-size="cover">
 					<h2>Autoprefixer</h2>
-					<p>Automagically add vendor prefixes to exisitng CSS code.</p>
+					<p>Automagically prefix CSS code!</p>
 					<p>No more <code>-webkit-</code>, <code>-moz-</code>, <code>-ms-</code> ect&hellip;</p>
 				</section>
 
@@ -300,7 +311,7 @@ button.classList.add(styles.normal);
 				</section>
 
 				<section data-background="img/bg-1.png" data-background-size="cover">
-					<h2>Other CSS Talks At Dev Summit</h2>
+					<h2>CSS Talks At Dev Summit</h2>
 					<ul>
 						<li><a href="https://devsummit.schedule.esri.com/#schedule/56b2874a4be5dd46a30002ec/56b2874a4be5dd46a30002ed">Intro to CSS for Geographers</a></li>
 						<li><a href="https://devsummit.schedule.esri.com/#schedule/56b2874b4be5dd46a30002ef/56b2874b4be5dd46a30002f0">CSS: Rules to Style By</a></li>
